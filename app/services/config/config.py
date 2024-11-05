@@ -1,9 +1,11 @@
 import toml
 import os
-
+from dotenv import load_dotenv
+# .envファイルを読み込む
+load_dotenv()
 
 def load_config(file_path):
-    toml_dir = os.getenv("TOML_DIR")
+    toml_dir = os.getenv("TOML_DIR", "services/config")
     toml_file = os.path.join(toml_dir, file_path)
 
     # Tomlファイルの読み込み
