@@ -1,0 +1,10 @@
+[urls]
+    AbuseIPDB_URL = "https://api.abuseipdb.com/api/v2/check?ipAddress={ip_address}"
+    AbuseIPDB_URL_end_point = "https://api.abuseipdb.com/api/v2/check"
+    VirusTotal_URL = "https://www.virustotal.com/api/v3/ip_addresses/"
+    GreenSnow_URL = "https://blocklist.greensnow.co/greensnow.txt"
+    CINSscore_URL = "http://cinsscore.com/list/ci-badguys.txt"
+    BruteForceBlocker_URL = "https://iplists.firehol.org/files/bruteforceblocker.ipset"
+    
+
+

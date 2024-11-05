@@ -1,0 +1,10 @@
+__pycache__
+nohup.out
+results/
+*.pdf
+*.png
+
+*.txt
+
+
+config_secret.toml
