@@ -84,7 +84,7 @@ def display_osint_info(ip_address):
 def write_ip_details_to_txt(ip_address, output_txt):
     load_dotenv()
 
-    directory_path = os.getenv("RESULTS_DIR", "results")
+    directory_path = os.getenv("RESULTS_DIR")
     if not os.path.exists(directory_path):
         os.makedirs(directory_path)
 

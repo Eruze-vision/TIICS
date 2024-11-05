@@ -3,7 +3,8 @@ import os
 
 
 def load_config(file_path):
-    toml_file = os.path.join(os.environ["PYTHONPATH"], file_path)
+    toml_dir = os.getenv("TOML_DIR")
+    toml_file = os.path.join(toml_dir, file_path)
 
     # Tomlファイルの読み込み
     config = toml.load(toml_file)
@@ -11,8 +12,11 @@ def load_config(file_path):
 
 
 def config_toml():
-    conf = load_config("./NAIADES/config.toml")
-    conf_secret = load_config("./NAIADES/config_secret.toml")
+    conf_path = os.getenv("CONF_PATH")
+    conf_secret_path = os.getenv("CONF_SECRET_PATH")
+
+    conf = load_config(conf_path)
+    conf_secret = load_config(conf_secret_path)
 
     return conf, conf_secret
 
